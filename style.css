@@ -330,3 +330,16 @@ span {
 #error i{
     margin-right: 40px;
 }
+footer {
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #ddd;
+    padding-left: 12px;
+    padding-bottom: 20px;
+    line-height: 20px;
+}
+footer a:hover{
+    text-decoration: underline;
+}
