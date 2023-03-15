@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Abonnements disponibles</title>
+</head>
+
+<body>
+    <button class="homeButton" onclick="location.href='index.html'" style="cursor: pointer;"><i
+            class="fas fa-house-user"></i></button>
+    <div class="headerSubs">
+        <h1>Abonnements</h1>
+    </div>
+    <div id="country">
+        <label for="countrySelect">Choisissez votre localisation :</label>
+        <select id="countrySelect">
+            <option value="ue">UE</option>
+            <option value="uk">UK</option>
+            <option value="usa">USA</option>
+            <option value="Suisse">Suisse</option>
+        </select>
+    </div>
+    <div class="cards">
+        <div class="card starter">
+            <h2>Starter</h2>
+            <p><i class="fas fa-check"></i> Tous les films à la demande</p>
+            <p><i class="fas fa-check"></i> Qualité HD</p>
+            <p><i class="fas fa-check"></i> Téléchargement en Qualité SD</p>
+            <p style="color: #cfcfcf;"><i class="fas fa-plus" style="transform: rotate(45deg);"></i> Animés à la demande
+            </p>
+            <h3><span id="priceStarter">9,99€</span>/mois</h3>
+            <button>Selectionner</button>
+        </div>
+        <div class="card popular">
+            <h2>Gold</h2>
+            <p><i class="fas fa-check"></i> Tous les films à la demande</p>
+            <p><i class="fas fa-check"></i> Qualité Full HD</p>
+            <p><i class="fas fa-check"></i> Téléchargement en Qualité HD</p>
+            <p><i class="fas fa-check"></i> Animés à la demande en HD</p>
+            <h4 style="font-size: small; font-weight: lighter; opacity: 0.5;"><span>20,99€</span>/mois</h4>
+            <h3><span id="pricePop">19,99€</span>/mois</h3>
+            <button>Selectionner</button>
+        </div>
+        <div class="card plat">
+            <h2>Platinium</h2>
+            <p><i class="fas fa-check"></i> Tous les films à la demande</p>
+            <p><i class="fas fa-check"></i> Qualité Ultra HD</p>
+            <p><i class="fas fa-check"></i> Téléchargement en Qualité Full HD</p>
+            <p><i class="fas fa-check"></i> Animés à la demande en Ultra HD</p>
+            <h3><span id="pricePlat">23,78€</span>/mois</h3>
+            <button>Selectionner</button>
+        </div>
+    </div>
+    <p style="text-align: center; color: white;">Dernière mise à jour des prix: 20/2/2023, 1:13AM</p>
+    <script src="src/subs.js"></script>
+</body>
+
+</html>

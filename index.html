@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Roflix</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Créez un conteneur pour la barre de navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-brand">Roflix</div>
+        <!-- Créez un bouton de type "button" pour le bouton "hamburger" -->
+        <button id="nav-toggle" class="nav-toggle">
+            <!-- Créez une icône de hamburger avec Font Awesome -->
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Créez une liste d'éléments de navigation -->
+        <ul id="nav-menu" class="nav-menu">
+            <!-- Déplacez le premier lien en dessous de la barre de navigation -->
+            <!-- Ajouter un lien pour fermer le menu de navigation en plein écran -->
+            <li><a id="home" href="#">Accueil</a></li>
+            <li><a id="filmButton" href="#films">Tous les Films</a></li>
+            <li><a id="contactButton" href="#contact">Contact</a></li>
+            <li><button class="glass-button" onclick="location.href='subs.html'">Upgrade</button></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <div class="txt-hero">
+            <center>
+                <p>The</p>
+                <h1>Batman</h1>
+                <button class="glass-button">Voir Maintenant</button>
+            </center>
+        </div>
+    </div>
+
+    <div class="body">
+        <div id="error">
+            <h1 style="text-align: center;"><i class="fas fa-exclamation" style="color: white;"></i>   Oups... Une erreur est survenue lors du chargement des films!</h1>
+        </div>
+    </div>
+
+    
+    <script src="src/app.js"></script>
+</body>
+
+</html>

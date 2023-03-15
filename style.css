@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    background-color: rgb(65, 65, 65);
+    
+}
+#navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 999;
+    position: fixed;
+    transition: background-color 0.5s;
+}
+
+/*Style de l'élément du prénom/nom */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 30px;
+    color: white;
+}
+
+/* Style des éléments de la liste */
+#nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+/* Style des liens de la barre de navigation */
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 20px;
+    transition: all 0.2s;
+}
+
+/* Style du bouton "hamburger" */
+#nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+/* style du nav-toggle */
+#nav-toggle i {
+    font-size: 30px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Style des liens de la barre de navigation */
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    transition: all 0.2s;
+}
+
+/*image du header du site */
+.hero {
+    height: 100vh;
+    background: url("https://images.mubicdn.net/images/film/227905/cache-458379-1650373248/image-w1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* changer le 0.5 pour ajuster l'opacité */
+}
+/* le texte dans l'image et le style de celui ci jusqu'a la ligne 106 */
+.txt-hero {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding-top: 65vh;
+    line-height: 20px;
+}
+.txt-hero button{
+    margin-top: 10vh;
+}
+.txt-hero {
+    position: relative;
+    z-index: 1; /* mettre un z-index supérieur pour que le texte apparaisse au-dessus du voile sombre */
+}
+
+.txt-hero::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5); /* ajuster l'opacité selon vos préférences */
+}
+.txt-hero h1 {
+    font-size: 70px;
+}
+
+.txt-hero p {
+    font-size: 25px;
+}
+
+.txt-hero h1,
+.txt-hero p {
+    line-height: 60px;
+}
+.glass-button {
+    font-size: 10px;
+    padding: 10px 30px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.glass-button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: rotate(45deg);
+    z-index: -1;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* #nav-toggle {
+        display: block;
+    } */
+
+    #navbar a {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+}
+
+/* Subs */
+#country label {
+    color: white;
+    margin: 50px;
+}
+.headerSubs h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.cards p{
+    font-size: 15px;
+}
+.card h3{
+    padding-bottom: 20px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    display: inline-block;
+    transition: all ease-in-out .3s;
+    line-height: 38px;
+}
+.card button{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.04);
+    transition: all ease-in-out .3s;
+}
+.popular {
+    padding: 10px 30px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.popular::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: rotate(45deg);
+    z-index: -1;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+.popular h4{
+    text-decoration: line-through;
+    padding-bottom: 10px;
+}
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+span {
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.homeButton{
+    background-color: rgb(124, 124, 124);
+    border: none;
+    border-radius: 15px;
+    padding: 14px;
+    margin: 7px;
+}
+
+/* cgu */
+
+.containerCGU h2{
+    padding-left: 50px;
+}
+.containerCGU{
+    padding-left: 10px;  
+}
+.containerCGU p{
+    line-height: 30px;
+}
+#error{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+#error h1{
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+#error i{
+    margin-right: 40px;
+}
